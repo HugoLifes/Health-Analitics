@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-kq0ch(quu_j&!=9@g&4436snd4(bfe*5w79!pqy9!fhn3!myub
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['employeets.azurewebsites.net']
+ALLOWED_HOSTS = ['employeets.azurewebsites.net','127.0.0.1']
 
 CORS_ORIGIN_ALLOW_ALL=True
 # Application definition

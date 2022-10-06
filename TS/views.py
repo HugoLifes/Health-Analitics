@@ -7,15 +7,12 @@ from django.http import response
 
 from TS.models import Activity, Heartrate, Sleep
 from TS.serializers import ActivitySerializer, HeartSerializer, SleepSerializer
-from django.http import HttpResponse #added
+
 from django.core.files.storage import default_storage
 
 # Create your views here.
 
-def main(request):
-    return render(request, 'analitics/main.html')
-def user_info(request):
-    return render(request, 'analitics/user_info.html')
+
 
 @csrf_exempt
 def activityApi(request, id=0):
@@ -99,3 +96,7 @@ def sleepApi(request, id=0):
         sleep.delete()
         return response.JsonResponse("Deleted Successfully", safe= False)
 
+def main(request):
+    return render(request, 'analitics/main.html')
+def user_info(request):
+    return render(request, 'analitics/user_info.html')
